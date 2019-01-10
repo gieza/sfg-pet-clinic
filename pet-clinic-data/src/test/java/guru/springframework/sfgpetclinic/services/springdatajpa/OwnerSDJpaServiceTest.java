@@ -103,8 +103,7 @@ class OwnerSDJpaServiceTest {
     @Test
     void delete() {
         service.delete(returnOwner);
-        //times(1) is default setup
-        verify(ownerRepository, times(1)).deleteById(anyLong());
+        verify(ownerRepository,times(1)).delete(any());
     }
 
     @Test
